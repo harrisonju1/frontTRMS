@@ -28,7 +28,7 @@ class submitclaim extends Component{
         return (
             <div className={className}>
                 <label>{field.label}</label>
-                <input className="form-control" type="datetime-local" {...field.input}/>
+                <input className="form-control" type="date" {...field.input}/>
                 <div className="text-help">
                     {touched ? error:""}
                 </div>
@@ -88,27 +88,20 @@ class submitclaim extends Component{
                     label="Cost:"
                     name="cost"
                     component={this.renderFieldInt}
-                    validate={[required(),date({ format: 'mm/dd/yyyy' })]}
                 />
                 <Field
                     label="Grade:"
                     name="grade"
                     component={this.renderFieldInt}
-                    validate={[required()]}
                 />
                 <Field
                     label="Grade to pass: "
                     name="grade_to_pass"
                     component={this.renderFieldInt}/>
                 <Field
-                    label="Location"
-                    name="location"
-                    component={this.renderField}/>
-                <Field
                     label="Event Start Date"
                     name="event_start"
                     component={this.renderFieldDate}
-
                 />
                 <Field
                     label="Event End Date:"
@@ -116,17 +109,10 @@ class submitclaim extends Component{
                     component={this.renderFieldDate}
                 />
                 <Field
-                    label="Expected Hours missed:"
-                    name="expected_miss"
-                    component={this.renderFieldInt}
-                />
-                <Field
                     label="Attachments:"
                     name="attachment"
                     component={this.renderFieldFile}
-                    validate={[required(), numericality({integer: true, '>': 0})]}
                 />
-
                 <button type ="submit" className="btn btn-primary">Submit</button>
                 <Link to="/" className="btn btn-danger">Cancel</Link>
             </form>
