@@ -40,6 +40,7 @@ const MuiTable = () => {
                 <TableRowColumn>7</TableRowColumn>
                 <TableRowColumn>20</TableRowColumn>
                 <TableRowColumn>University</TableRowColumn>
+                <TableRowColumn>1000</TableRowColumn>
                 <TableRowColumn>100</TableRowColumn>
                 <TableRowColumn>70</TableRowColumn>
                 <TableRowColumn>null</TableRowColumn>
@@ -65,6 +66,7 @@ class claimstatus extends Component{
                         <TableHeaderColumn>Claim ID </TableHeaderColumn>
                         <TableHeaderColumn>Event ID </TableHeaderColumn>
                         <TableHeaderColumn>Type of Reimbursement</TableHeaderColumn>
+                        <TableHeaderColumn>Cost</TableHeaderColumn>
                         <TableHeaderColumn>Grade</TableHeaderColumn>
                         <TableHeaderColumn>Grade to Pass</TableHeaderColumn>
                         <TableHeaderColumn>Supervisor Approval Date</TableHeaderColumn>
@@ -81,6 +83,7 @@ class claimstatus extends Component{
                         <TableRowColumn>7</TableRowColumn>
                         <TableRowColumn>20</TableRowColumn>
                         <TableRowColumn>University</TableRowColumn>
+                        <TableRowColumn>1000</TableRowColumn>
                         <TableRowColumn>100</TableRowColumn>
                         <TableRowColumn>70</TableRowColumn>
                         <TableRowColumn>null</TableRowColumn>
