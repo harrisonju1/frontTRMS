@@ -12,6 +12,7 @@ import registerServiceWorker from './registerServiceWorker';
 import reducers from "./reducers";
 import submitclaim from "./components/submitclaim";
 import login from "./components/login";
+import claimstatus from "./components/claimstatus";
 
 const createStoreWithMiddleware = applyMiddleware(promise)(createStore);
 
@@ -21,6 +22,7 @@ ReactDOM.render(
         <BrowserRouter>
             <div>
                 <Switch>
+                    <Route path="/claimstatus" component={claimstatus}/>
                     <Route path="/submitclaim" component={submitclaim} />
                     <Route path="/" component={login} />
                 </Switch>

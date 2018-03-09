@@ -1,7 +1,7 @@
 import axios from "axios";
 export const SUBMIT_CLAIM = "submitclaim";
 export const LOGIN = "login";
-export const CLAIM_STATUS = 'claimstatus'
+export const CLAIM_STATUS = 'claimstatus';
 
 const ROOT_URL = "http://localhost:8080";
 
@@ -31,3 +31,5 @@ export function claimStatusTRMS(values, callback){
         payload: request
     };
 }
+
+

@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 import {required} from 'redux-form-validators';
 import {connect} from "react-redux";
 import { createClaimTRMS } from '../actions';
+import './login.css';
 
 class submitclaim extends Component{
     renderFieldFile(field){
@@ -77,7 +78,7 @@ class submitclaim extends Component{
         const {handleSubmit} = this.props;
 
         return(
-            <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
+            <form className="form-signin" onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                 <Field
                     label="Reimbursement Type:"
                     name="reimbursement_type"
