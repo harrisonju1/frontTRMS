@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import {Field, reduxForm} from "redux-form";
 import {Link} from "react-router-dom";
-import {required, numericality, date} from 'redux-form-validators';
+import {required} from 'redux-form-validators';
 import {connect} from "react-redux";
 import { createClaimTRMS } from '../actions';
 
@@ -68,7 +68,7 @@ class submitclaim extends Component{
 
     onSubmit(values){
         this.props.createClaimTRMS(values,() =>{
-            this.props.history.push("/");
+            this.props.history.push("/claimstatus");
         });
         console.log(values);
     }

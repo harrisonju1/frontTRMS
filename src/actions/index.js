@@ -1,6 +1,7 @@
 import axios from "axios";
 export const SUBMIT_CLAIM = "submitclaim";
 export const LOGIN = "login";
+export const CLAIM_STATUS = 'claimstatus'
 
 const ROOT_URL = "http://localhost:8080";
 
@@ -18,6 +19,15 @@ export function loginTRMS(values, callback){
 
     return{
         type: LOGIN,
+        payload: request
+    };
+}
+
+export function claimStatusTRMS(values, callback){
+    const request = axios.post(`${ROOT_URL}/claimstatus`,values).then(()=>callback());
+
+    return{
+        type:CLAIM_STATUS,
         payload: request
     };
 }
